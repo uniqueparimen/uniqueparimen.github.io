@@ -138,10 +138,43 @@
             padding: 20px;
             font-size: 0.9em;
             opacity: 0.8;
-        }
+     }
+	 .image-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
     </style>
 </head>
-<body>
+<body> 
+	<!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
     <div class="container">
         <header>
             <h1>🛍️ Boutique de Sacs</h1>
@@ -198,7 +231,7 @@
             
             card.innerHTML = `
                 <div class="product-image">
-                    <img src="${bag.image}" alt="${bag.name}">
+                    <img src="${bag.image}" alt="${bag.name}" onclick="openImage('${bag.image}')">
                     <div class="product-number">#${index + 1}</div>
                 </div>
                 <div class="product-info">
@@ -217,6 +250,23 @@
         function goToWhatsApp() {
 		window.open("https://www.facebook.com/profile.php?id=61587474565580&notif_id=1769984191188760&notif_t=follower_invite&ref=notif", "_blank");
   }
+  function openImage(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    modal.style.display = "flex";
+    modalImg.src = src;
+}
+
+document.querySelector(".close-modal").onclick = function () {
+    document.getElementById("imageModal").style.display = "none";
+};
+
+// Close modal when clicking outside image
+document.getElementById("imageModal").onclick = function (e) {
+    if (e.target.id === "imageModal") {
+        this.style.display = "none";
+    }
     </script>
 </body>
 </html>
