@@ -3,141 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Boutique de Sacs - Nature</title>
+    <title>Ma Collection de Sacs Artisanaux</title>
     <style>
-        /* Arrière-plan Nature */
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Effet de superposition sombre pour la lisibilité */
-        .overlay {
-            background: rgba(0, 0, 0, 0.4);
-            min-height: 100vh;
-            padding-bottom: 50px;
+            background-color: #f8f8f8; /* Fond légèrement gris pour un contraste doux */
+            color: #333;
         }
 
         header {
-            color: white;
-            padding: 3rem;
             text-align: center;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            padding: 40px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #555;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes flexibles */
+            gap: 30px; /* Espace entre les cartes */
             padding: 0 20px;
         }
 
-        /* Cartes avec effet de transparence (Glassmorphism) */
         .sac-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Ombre plus douce */
             overflow: hidden;
-            transition: transform 0.3s;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.2s ease-in-out;
+            display: flex; /* Utilisation de flexbox pour aligner le contenu */
+            flex-direction: column;
         }
 
         .sac-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .sac-card img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 280px; /* Hauteur fixe pour toutes les images */
+            object-fit: cover; /* Recadre les images pour remplir l'espace */
+            border-bottom: 1px solid #eee;
         }
 
         .info {
-            padding: 20px;
+            padding: 15px;
+            flex-grow: 1; /* Permet à l'info de prendre l'espace restant */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Espace les éléments verticalement */
         }
 
         .info h3 {
-            margin: 0 0 10px 0;
-            color: #2d3436;
+            font-size: 1.2em;
+            margin: 10px 0 5px 0;
+            color: #333;
+        }
+
+        .info p.categorie { /* Style pour les catégories si tu veux les ajouter */
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
         }
 
         .prix {
-            font-size: 1.4rem;
+            font-size: 1.3em;
             font-weight: bold;
-            color: #27ae60; /* Vert nature */
-            margin-bottom: 20px;
+            color: #e67e22; /* Couleur orange pour le prix */
+            margin: 10px 0 15px 0;
         }
 
-        .btn-acheter {
-            display: block;
-            background-color: #2ecc71;
-            color: white;
-            padding: 12px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn-acheter:hover {
-            background-color: #27ae60;
-        }
-    </style>
-</head>
-<body>
-
-<div class="overlay">
-    <header>
-        <h1>🌿 Ma Collection Nature</h1>
-        <p>L'élégance au naturel, livrée partout en Tunisie</p>
-    </header>
-
-    <div class="container">
-        
-        <div class="sac-card">
-            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Sac à main">
-            <div class="info">
-                <h3>Sac à Main Cuir</h3>
-                <p class="prix">145.000 TND</p>
-                <a href="#" class="btn-acheter">Commander</a>
-            </div>
-        </div>
-
-        <div class="sac-card">
-            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="Sac à dos">
-            <div class="info">
-                <h3>Sac à Dos Aventurier</h3>
-                <p class="prix">189.000 TND</p>
-                <a href="#" class="btn-acheter">Commander</a>
-            </div>
-        </div>
-
-        <div class="sac-card">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80" alt="Sac de voyage">
-            <div class="info">
-                <h3>Sac de Voyage</h3>
-                <p class="prix">220.000 TND</p>
-                <a href="#" class="btn-acheter">Commander</a>
-            </div>
-        </div>
-
-        <div class="sac-card">
-            <img src="https://images.unsplash.com/photo-1598533123413-82c51b66a8a8?auto=format&fit=crop&w=500&q=80" alt="Pochette">
-            <div class="info">
-                <h3>Pochette Artisanale</h3>
-                <p class="prix">75.000 TND</p>
-                <a href="#" class="btn-acheter">Commander</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-</body>
-</html>
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center
