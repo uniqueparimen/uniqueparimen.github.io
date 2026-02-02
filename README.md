@@ -61,6 +61,20 @@
             height: 280px; /* Hauteur fixe pour toutes les images */
             object-fit: cover; /* Recadre les images pour remplir l'espace */
             border-bottom: 1px solid #eee;
+            <img src="[https://i.ibb.co/XXXXX/ton-image.jpg](https://ibb.co/39Bts14M
+https://ibb.co/vMb6Wfs
+https://ibb.co/f5NXkfh
+https://ibb.co/bRdMzYSh
+https://ibb.co/FbMpKTTy
+https://ibb.co/xq8VGSw0
+https://ibb.co/HL4w6sqf
+https://ibb.co/HLxNs3DD
+https://ibb.co/TD2XkVMt
+https://ibb.co/3m0hpNdj
+https://ibb.co/zV97FDmY
+https://ibb.co/Pvyh6cDw
+https://ibb.co/ymchzR6Y
+https://ibb.co/M53mgFSD)" alt="Description du sac">
         }
 
         .info {
