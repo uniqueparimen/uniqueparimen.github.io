@@ -207,13 +207,14 @@
                     <div class="product-description">${bag.description}</div>
                     <div class="product-footer">
                         <div class="product-price">${bag.price.toFixed(2)} TND</div>
-                        <button class="buy-button" onclick=onclick="goToWhatsApp()">Acheter</button>
+                        <button class="buy-button" onclick="goToWhatsApp()">Acheter</button>
                     </div>
                 </div>
             `;
             
             productsGrid.appendChild(card);
         });
+	
         function goToWhatsApp() {
 		window.open("https://www.facebook.com/profile.php?id=61587474565580&notif_id=1769984191188760&notif_t=follower_invite&ref=notif", "_blank");
   }
