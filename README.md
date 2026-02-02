@@ -138,8 +138,8 @@
             padding: 20px;
             font-size: 0.9em;
             opacity: 0.8;
-     }
-	 .image-modal {
+        }
+        .image-modal {
     display: none;
     position: fixed;
     z-index: 999;
@@ -169,12 +169,13 @@
 }
     </style>
 </head>
-<body> 
-	<!-- Image Modal -->
+<body>
+    <!-- Image Modal -->
     <div id="imageModal" class="image-modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+
     <div class="container">
         <header>
             <h1>🛍️ Boutique de Sacs</h1>
@@ -184,26 +185,25 @@
         <div class="products-grid" id="productsGrid"></div>
 
         <footer>
-            <p>© 2026 Boutique de Sacs - Tous droits réservés <br>
-            contact:90295149</p>
+            <p>© 2026 Boutique de Sacs - Tous droits réservés</p>
         </footer>
     </div>
 
     <script>
         const bags = [
             { name: "Sac Fashion Journal", description: "Sac en cuir avec design journal vintage", price: 89.99, image: "2.jpg" },
-            { name: "Sac Artisanal Gris", description: "Style artisanal avec détails ethniques", price: 119.99, image: "1000020928.jpg" },
-            { name: "Sac Arbre Doré", description: "Design élégant avec broderie arbre de vie", price: 149.99, image: "1000020937.jpg" },
-            { name: "Sac Panier Naturel", description: "Panier tressé avec accents en cuir", price: 99.99, image: "1000020943.jpg" },
-            { name: "Sac Ethnique Motifs", description: "Motifs traditionnels colorés", price: 129.99, image: "1000020942.jpg" },
-            { name: "Sac Floral Bleu", description: "Fleurs brodées sur fond blanc", price: 69.99, image: "1000020944.jpg" },
-            { name: "Sac Franges Bohème", description: "Style bohème avec franges décoratives", price: 94.99, image: "1000020960.jpg" },
-            { name: "Sac Damier Orange", description: "Motif damier tendance", price: 79.99, image: "1000021020.jpg" },
-            { name: "Sac Calligraphie", description: "Design avec calligraphie artistique", price: 109.99, image: "1000021021.jpg" },
-            { name: "Sac Fashion Journal Plus", description: "Édition spéciale du modèle journal", price: 95.99, image: "1000021003.jpg" },
-            { name: "Sac Artisanal Deluxe", description: "Version premium du sac artisanal", price: 135.99, image: "1000020998.jpg" },
-            { name: "Sac Arbre de Vie", description: "Grande taille avec arbre doré", price: 159.99, image: "1000020970.jpg" },
-            { name: "Sac Panier Vintage", description: "Panier classique en osier", price: 105.99, image: "1000020951.jpg" },
+            { name: "Sac Artisanal Gris", description: "Style artisanal avec détails ethniques", price: 119.99, image: "3.jpeg" },
+            { name: "Sac Arbre Doré", description: "Design élégant avec broderie arbre de vie", price: 149.99, image: "1000020928.jpg" },
+            { name: "Sac Panier Naturel", description: "Panier tressé avec accents en cuir", price: 99.99, image: "1000020937.jpg" },
+            { name: "Sac Ethnique Motifs", description: "Motifs traditionnels colorés", price: 129.99, image: "bag5.png" },
+            { name: "Sac Floral Bleu", description: "Fleurs brodées sur fond blanc", price: 69.99, image: "bag6.png" },
+            { name: "Sac Franges Bohème", description: "Style bohème avec franges décoratives", price: 94.99, image: "bag7.png" },
+            { name: "Sac Damier Orange", description: "Motif damier tendance", price: 79.99, image: "bag8.png" },
+            { name: "Sac Calligraphie", description: "Design avec calligraphie artistique", price: 109.99, image: "bag9.png" },
+            { name: "Sac Fashion Journal Plus", description: "Édition spéciale du modèle journal", price: 95.99, image: "bag1.png" },
+            { name: "Sac Artisanal Deluxe", description: "Version premium du sac artisanal", price: 135.99, image: "bag2.png" },
+            { name: "Sac Arbre de Vie", description: "Grande taille avec arbre doré", price: 159.99, image: "bag3.png" },
+            { name: "Sac Panier Vintage", description: "Panier classique en osier", price: 105.99, image: "bag4.png" },
             { name: "Sac Ethnique Chic", description: "Motifs ethniques raffinés", price: 139.99, image: "bag5.png" },
             { name: "Sac Jardin Fleuri", description: "Imprimé floral délicat", price: 74.99, image: "bag6.png" },
             { name: "Sac Bohème Luxe", description: "Franges longues style bohème", price: 99.99, image: "bag7.png" },
@@ -238,7 +238,7 @@
                     <div class="product-name">${bag.name}</div>
                     <div class="product-description">${bag.description}</div>
                     <div class="product-footer">
-                        <div class="product-price">${bag.price.toFixed(2)} TND</div>
+                        <div class="product-price">${bag.price.toFixed(2)} €</div>
                         <button class="buy-button" onclick="goToWhatsApp()">Acheter</button>
                     </div>
                 </div>
@@ -246,9 +246,10 @@
             
             productsGrid.appendChild(card);
         });
-	
-        function goToWhatsApp() {
-		window.open("https://www.facebook.com/profile.php?id=61587474565580&notif_id=1769984191188760&notif_t=follower_invite&ref=notif", "_blank");
+
+        
+  function goToWhatsApp() {
+    window.open("https://www.facebook.com/profile.php?id=61587474565580&notif_id=1769984191188760&notif_t=follower_invite&ref=notif", "_blank");
   }
   function openImage(src) {
     const modal = document.getElementById("imageModal");
@@ -267,6 +268,14 @@ document.getElementById("imageModal").onclick = function (e) {
     if (e.target.id === "imageModal") {
         this.style.display = "none";
     }
+};
+</script>
+
+
+
+
+</script>
+
     </script>
 </body>
 </html>
