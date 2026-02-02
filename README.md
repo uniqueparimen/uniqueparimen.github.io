@@ -3,130 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Boutique de Sacs</title>
+    <title>Ma Boutique de Sacs - Nature</title>
     <style>
-        /* Style général */
+        /* Arrière-plan Nature */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Effet de superposition sombre pour la lisibilité */
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+            min-height: 100vh;
+            padding-bottom: 50px;
         }
 
         header {
-            background-color: #333;
             color: white;
-            padding: 2rem;
+            padding: 3rem;
             text-align: center;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        /* Grille des produits */
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             padding: 0 20px;
         }
 
-        /* Carte Produit */
+        /* Cartes avec effet de transparence (Glassmorphism) */
         .sac-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
             overflow: hidden;
             transition: transform 0.3s;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .sac-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .sac-card img {
             width: 100%;
             height: 250px;
-            object-fit: cover; /* Garde les proportions de l'image */
-            background-color: #ddd;
+            object-fit: cover;
         }
 
         .info {
-            padding: 15px;
+            padding: 20px;
         }
 
         .info h3 {
-            margin: 10px 0;
-            color: #444;
+            margin: 0 0 10px 0;
+            color: #2d3436;
         }
 
         .prix {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #e67e22;
-            margin-bottom: 15px;
+            color: #27ae60; /* Vert nature */
+            margin-bottom: 20px;
         }
 
         .btn-acheter {
-            display: inline-block;
-            background-color: #27ae60;
+            display: block;
+            background-color: #2ecc71;
             color: white;
-            padding: 10px 20px;
+            padding: 12px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
 
         .btn-acheter:hover {
-            background-color: #2ecc71;
+            background-color: #27ae60;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Ma Collection de Sacs</h1>
-    <p>Trouvez le compagnon idéal pour votre quotidien</p>
-</header>
+<div class="overlay">
+    <header>
+        <h1>🌿 Ma Collection Nature</h1>
+        <p>L'élégance au naturel, livrée partout en Tunisie</p>
+    </header>
 
-<div class="container">
-    
-    <div class="sac-card">
-        <img src="https://via.placeholder.com/300x250?text=Sac+à+main" alt="Sac à main">
-        <div class="info">
-            <h3>Sac à Main Élégant</h3>
-            <p class="prix">45,00 €</p>
-            <a href="#" class="btn-acheter">Ajouter au panier</a>
+    <div class="container">
+        
+        <div class="sac-card">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Sac à main">
+            <div class="info">
+                <h3>Sac à Main Cuir</h3>
+                <p class="prix">145.000 TND</p>
+                <a href="#" class="btn-acheter">Commander</a>
+            </div>
         </div>
-    </div>
 
-    <div class="sac-card">
-        <img src="https://via.placeholder.com/300x250?text=Sac+à+dos" alt="Sac à dos">
-        <div class="info">
-            <h3>Sac à Dos Urbain</h3>
-            <p class="prix">55,00 €</p>
-            <a href="#" class="btn-acheter">Ajouter au panier</a>
+        <div class="sac-card">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="Sac à dos">
+            <div class="info">
+                <h3>Sac à Dos Aventurier</h3>
+                <p class="prix">189.000 TND</p>
+                <a href="#" class="btn-acheter">Commander</a>
+            </div>
         </div>
-    </div>
 
-    <div class="sac-card">
-        <img src="https://via.placeholder.com/300x250?text=Sac+de+voyage" alt="Sac de voyage">
-        <div class="info">
-            <h3>Sac de Voyage Cuir</h3>
-            <p class="prix">89,00 €</p>
-            <a href="#" class="btn-acheter">Ajouter au panier</a>
+        <div class="sac-card">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80" alt="Sac de voyage">
+            <div class="info">
+                <h3>Sac de Voyage</h3>
+                <p class="prix">220.000 TND</p>
+                <a href="#" class="btn-acheter">Commander</a>
+            </div>
         </div>
-    </div>
 
-    <div class="sac-card">
-        <img src="https://via.placeholder.com/300x250?text=Pochette" alt="Pochette">
-        <div class="info">
-            <h3>Pochette de Soirée</h3>
-            <p class="prix">29,99 €</p>
-            <a href="#" class="btn-acheter">Ajouter au panier</a>
+        <div class="sac-card">
+            <img src="https://images.unsplash.com/photo-1598533123413-82c51b66a8a8?auto=format&fit=crop&w=500&q=80" alt="Pochette">
+            <div class="info">
+                <h3>Pochette Artisanale</h3>
+                <p class="prix">75.000 TND</p>
+                <a href="#" class="btn-acheter">Commander</a>
+            </div>
         </div>
-    </div>
 
+    </div>
 </div>
 
 </body>
