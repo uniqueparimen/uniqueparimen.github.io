@@ -93,4 +93,159 @@
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
-            justify-content: center
+            justify-content: center;
+            background-color: #25D366; /* Vert WhatsApp */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: auto; /* Pousse le bouton vers le bas */
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        .btn-whatsapp .icon {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MA COLLECTION DE SACS</h1>
+    <p>Trouvez le compagnon idéal pour votre quotidien</p>
+</header>
+
+<div class="container">
+    
+    <div class="sac-card">
+        <img src="https://i.ibb.co/3zd5s0Y/Image-1.jpg" alt="Sac Brodé Naturel">
+        <div class="info">
+            <h3>Sac Brodé Naturel</h3>
+            <p class="prix">85,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Brodé Naturel', '85,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/j3n92k1/Image-2.jpg" alt="Sac Journal Chic">
+        <div class="info">
+            <h3>Sac Journal Chic</h3>
+            <p class="prix">93,200 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Journal Chic', '93,200 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/L5w2R3D/Image-3.jpg" alt="Sac Tressé Bohème">
+        <div class="info">
+            <h3>Sac Tressé Bohème</h3>
+            <p class="prix">110,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Tressé Bohème', '110,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/P4725hP/Image-4.jpg" alt="Sac Urbain Géométrique">
+        <div class="info">
+            <h3>Sac Urbain Géométrique</h3>
+            <p class="prix">93,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Urbain Géométrique', '93,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/M95N90S/Image-6.jpg" alt="Sac Paille Cuir">
+        <div class="info">
+            <h3>Sac Paille Cuir</h3>
+            <p class="prix">120,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Paille Cuir', '120,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/n6z4k14/Image-7.jpg" alt="Sac Franges Paillettes">
+        <div class="info">
+            <h3>Sac Franges Paillettes</h3>
+            <p class="prix">89,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Franges Paillettes', '89,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+    
+    <div class="sac-card">
+        <img src="https://i.ibb.co/3s682Xh/Image-8.jpg" alt="Sac Fleurs Bleues">
+        <div class="info">
+            <h3>Sac Fleurs Bleues</h3>
+            <p class="prix">89,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Fleurs Bleues', '89,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/sK65Wb1/Image-9.jpg" alt="Sac Fleurs Élégant">
+        <div class="info">
+            <h3>Sac Fleurs Élégant</h3>
+            <p class="prix">95,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Fleurs Élégant', '95,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="sac-card">
+        <img src="https://i.ibb.co/jH0Yd7j/Image-10.jpg" alt="Sac Floral Élégant">
+        <div class="info">
+            <h3>Sac Floral Élégant</h3>
+            <p class="prix">99,000 TND</p>
+            <button class="btn-whatsapp" onclick="sendWhatsApp('Sac Floral Élégant', '99,000 TND')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="icon">
+                Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+    
+    </div>
+
+<script>
+    function sendWhatsApp(nomSac, prixSac) {
+        const telephone = "21690295149"; // Ton numéro de téléphone
+        const message = `Bonjour ! Je suis intéressé(e) par le sac suivant :\n\n- Nom : ${nomSac}\n- Prix : ${prixSac}\n\nMerci de me donner plus de détails.`;
+        
+        const url = `https://wa.me/${telephone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
