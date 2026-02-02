@@ -152,7 +152,8 @@
         <div class="products-grid" id="productsGrid"></div>
 
         <footer>
-            <p>© 2026 Boutique de Sacs - Tous droits réservés</p>
+            <p>© 2026 Boutique de Sacs - Tous droits réservés <br>
+            contact:90295149</p>
         </footer>
     </div>
 
@@ -205,8 +206,8 @@
                     <div class="product-name">${bag.name}</div>
                     <div class="product-description">${bag.description}</div>
                     <div class="product-footer">
-                        <div class="product-price">${bag.price.toFixed(2)} €</div>
-                        <button class="buy-button" onclick="alert('Merci! ${bag.name} ajouté au panier!')">Acheter</button>
+                        <div class="product-price">${bag.price.toFixed(2)} TND</div>
+                        <button class="buy-button" onclick="alert('pour acheter  ${bag.name} contacter :90295149')">Acheter</button>
                     </div>
                 </div>
             `;
