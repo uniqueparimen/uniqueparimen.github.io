@@ -3,161 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique de Sacs Tunisie</title>
-
+    <title>Boutique de Sacs</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background-color: #ffffff;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5e6d3;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         header {
             text-align: center;
-            padding: 25px 15px;
-            background-color: #fcfcfc;
-            border-bottom: 1px solid #eee;
+            color: #5a4a3a;
+            margin-bottom: 40px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 24px;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
-            color: #777;
-            font-size: 14px;
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
-        .container {
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 15px;
-            max-width: 1100px;
-            margin: auto;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
-        .product {
-            border: 1px solid #eee;
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-            background-color: #fafafa;
-        }
-
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .product h3 {
-            margin: 12px 0 5px;
-            font-size: 18px;
-        }
-
-        .price {
-            font-size: 17px;
-            font-weight: bold;
-            color: #c97b63;
-            margin: 8px 0;
-        }
-
-        .product button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background-color: #333;
-            color: white;
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            border-radius: 6px;
-            font-size: 15px;
         }
 
-        .product button:hover {
-            background-color: #555;
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        /* Floating social buttons */
-        .social-buttons {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+        .product-image {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #764ba2;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.3em;
+            font-weight: bold;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-footer {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 999;
-        }
-
-        .social-buttons a {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .buy-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-decoration: none;
-            font-size: 22px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s ease;
         }
 
-        .whatsapp {
-            background-color: #25D366;
+        .buy-button:hover {
+            transform: scale(1.05);
         }
 
-        .instagram {
-            background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 20px;
-            }
+        footer {
+            text-align: center;
+            color: #5a4a3a;
+            padding: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>🛍️ Boutique de Sacs</h1>
+            <p>Collection Premium - 30 Modèles Uniques</p>
+        </header>
 
-<header>
-    <h1>Boutique de Sacs Faits Main</h1>
-    <p>Contactez-nous sur WhatsApp ou Instagram</p>
-</header>
+        <div class="products-grid" id="productsGrid"></div>
 
-<div class="container">
-
-    <div class="product">
-        <img src="https://ibb.co/xq8VGSw0/400x300">
-        <h3>Sac en cuir naturel</h3>
-        <p class="price">120 TND</p>
-        <button>Commander</button>
+        <footer>
+            <p>© 2026 Boutique de Sacs - Tous droits réservés</p>
+        </footer>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/400x300">
-        <h3>Sac en tissu brodé</h3>
-        <p class="price">65 TND</p>
-        <button>Commander</button>
-    </div>
+    <script>
+        const bags = [
+            { name: "Sac Fashion Journal", description: "Sac en cuir avec design journal vintage", price: 89.99, image: "2.jpg" },
+            { name: "Sac Artisanal Gris", description: "Style artisanal avec détails ethniques", price: 119.99, image: "3.jpeg" },
+            { name: "Sac Arbre Doré", description: "Design élégant avec broderie arbre de vie", price: 149.99, image: "1000020928.jpg" },
+            { name: "Sac Panier Naturel", description: "Panier tressé avec accents en cuir", price: 99.99, image: "1000020937.jpg" },
+            { name: "Sac Ethnique Motifs", description: "Motifs traditionnels colorés", price: 129.99, image: "bag5.png" },
+            { name: "Sac Floral Bleu", description: "Fleurs brodées sur fond blanc", price: 69.99, image: "bag6.png" },
+            { name: "Sac Franges Bohème", description: "Style bohème avec franges décoratives", price: 94.99, image: "bag7.png" },
+            { name: "Sac Damier Orange", description: "Motif damier tendance", price: 79.99, image: "bag8.png" },
+            { name: "Sac Calligraphie", description: "Design avec calligraphie artistique", price: 109.99, image: "bag9.png" },
+            { name: "Sac Fashion Journal Plus", description: "Édition spéciale du modèle journal", price: 95.99, image: "bag1.png" },
+            { name: "Sac Artisanal Deluxe", description: "Version premium du sac artisanal", price: 135.99, image: "bag2.png" },
+            { name: "Sac Arbre de Vie", description: "Grande taille avec arbre doré", price: 159.99, image: "bag3.png" },
+            { name: "Sac Panier Vintage", description: "Panier classique en osier", price: 105.99, image: "bag4.png" },
+            { name: "Sac Ethnique Chic", description: "Motifs ethniques raffinés", price: 139.99, image: "bag5.png" },
+            { name: "Sac Jardin Fleuri", description: "Imprimé floral délicat", price: 74.99, image: "bag6.png" },
+            { name: "Sac Bohème Luxe", description: "Franges longues style bohème", price: 99.99, image: "bag7.png" },
+            { name: "Sac Damier Classique", description: "Damier orange et marron", price: 84.99, image: "bag8.png" },
+            { name: "Sac Calligraphie Art", description: "Art calligraphique oriental", price: 114.99, image: "bag9.png" },
+            { name: "Sac Journal Rétro", description: "Design vintage intemporel", price: 92.99, image: "bag1.png" },
+            { name: "Sac Gris Moderne", description: "Style contemporain épuré", price: 124.99, image: "bag2.png" },
+            { name: "Sac Broderie Arbre", description: "Broderie main arbre doré", price: 154.99, image: "bag3.png" },
+            { name: "Sac Osier Premium", description: "Osier naturel de qualité", price: 109.99, image: "bag4.png" },
+            { name: "Sac Motifs Tradition", description: "Inspiration traditionnelle", price: 134.99, image: "bag5.png" },
+            { name: "Sac Fleurs Bleues", description: "Fleurs brodées main", price: 79.99, image: "bag6.png" },
+            { name: "Sac Franges Noir", description: "Franges élégantes noires", price: 97.99, image: "bag7.png" },
+            { name: "Sac Carreaux Vintage", description: "Carreaux style rétro", price: 82.99, image: "bag8.png" },
+            { name: "Sac Art Oriental", description: "Calligraphie orientale raffinée", price: 119.99, image: "bag9.png" },
+            { name: "Sac Fashion Edition", description: "Édition limitée journal", price: 97.99, image: "bag1.png" },
+            { name: "Sac Artisan Master", description: "Chef-d'œuvre artisanal", price: 145.99, image: "bag2.png" },
+            { name: "Sac Arbre Prestige", description: "Prestige avec arbre brodé", price: 179.99, image: "bag3.png" }
+        ];
 
-    <div class="product">
-        <img src="https://via.placeholder.com/400x300">
-        <h3>Sac bohème</h3>
-        <p class="price">85 TND</p>
-        <button>Commander</button>
-    </div>
+        const productsGrid = document.getElementById('productsGrid');
 
-</div>
-
-<!-- Floating WhatsApp & Instagram buttons -->
-<div class="social-buttons">
-    <a class="whatsapp" href="https://wa.me/21690295149" target="_blank">💬</a>
-    <a class="facebook" href="https://www.facebook.com/profile.php?id=61587474565580" target="_blank">📸</a>
-</div>
-
+        bags.forEach((bag, index) => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            
+            card.innerHTML = `
+                <div class="product-image">
+                    <img src="${bag.image}" alt="${bag.name}">
+                    <div class="product-number">#${index + 1}</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">${bag.name}</div>
+                    <div class="product-description">${bag.description}</div>
+                    <div class="product-footer">
+                        <div class="product-price">${bag.price.toFixed(2)} €</div>
+                        <button class="buy-button" onclick="alert('Merci! ${bag.name} ajouté au panier!')">Acheter</button>
+                    </div>
+                </div>
+            `;
+            
+            productsGrid.appendChild(card);
+        });
+    </script>
 </body>
 </html>
